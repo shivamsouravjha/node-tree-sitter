@@ -320,7 +320,7 @@ describe("Tree", () => {
       assert.equal(cursor.nodeType, "program");
 
       // descend to expression statement
-      assert.equal(cursor.gotoFirstChildForPosition({ row: 6, column: 6 }), 0);
+      assert.equal(cursor.gotoFirstChildForPosition({ row: 6, column: 6 }), null);
       assert.equal(cursor.nodeType, "expression_statement");
 
       // step into ';' and back up
